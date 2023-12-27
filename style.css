@@ -1,0 +1,73 @@
+body {
+    align-items: center;
+    background: #F6F5F5;
+}
+#main{
+    border: solid;
+    margin-top: 80px;
+    width: 70%;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+}
+#game{
+    border: solid;
+    margin-top: 80px;
+    width: 70%;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+}
+#sel{
+    color:#276678;
+    text-align: center;
+}
+.button-container {
+    text-align: center;
+}
+#choice{
+    text-align: left;
+    margin: 10px;
+    border-color:#1687A7;
+    padding: 1em 2.5em;
+    border: 2;
+    background:transparent;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.category {
+    margin: 10px;
+    border-color: #276678;
+    padding: 1em 2.5em;
+    border: 2;
+    color: #276678;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: bold;
+    border-radius: 8px;
+}
+#checker{
+    margin: 10px;
+    border-color:#5B8C5A;
+    padding: 1em 1.5em;
+    border: 2;
+    color:#5B8C5A;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: bold;
+    border-radius: 8px;
+}
+#withdraw{
+    margin: 10px;
+    border-color:crimson;
+    padding: 1em 1.5em;
+    border: 2;
+    color: crimson;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-left: 260px;
+}
