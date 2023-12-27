@@ -2,9 +2,42 @@ body {
     align-items: center;
     background: #F6F5F5;
 }
+#alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-top: 50px;
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+#alert_success{
+    padding: 20px;
+    color: white;
+    margin-top: 50px;
+    background-color: #04AA6D;
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+#alert_warning{
+    padding: 10px;
+    color: white;
+    margin-top: 30px;
+    background-color: #ff9800;
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
 #main{
     border: solid;
-    margin-top: 80px;
+    margin-top: 60px;
     width: 70%;
     border-radius: 8px;
     margin-left: auto;
@@ -69,5 +102,5 @@ body {
     letter-spacing: .25em;
     font-weight: bold;
     border-radius: 8px;
-    margin-left: 260px;
+    margin-left: 240px;
 }
