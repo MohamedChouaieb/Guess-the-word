@@ -15,19 +15,20 @@
 <body>
     <section id="main">
     </section>
-    <section id="game" hidden>
+    <section id="game" >
       <input type="text" id="choice" placeholder="Enter your guess">
-      <button id="withdraw" type="button" onclick="lost()">Withdraw</button>
+      <button id="hinter" type="button" onclick="hintPlus()" disabled>Hint ?</button>
+      <button id="withdraw" type="button" onclick="lost();disableAll()">Withdraw</button>
       <button id="checker" type="submit" onclick="start()">Submit</button><br>
     </section>
-    <div id="alert" hidden>  
-    <strong>You lost ! </strong> 
-    Try refreshing the web page if you want to try again maybe ?</div>
-    <div id="alert_success" hidden>
-    <strong>Well Done ! </strong> Try refreshing the web page if you wish to play again 😉
-    </div>
-    <div id="alert_warning" hidden>
-    <strong>Try again !</strong>
+    <div class="alert_container">
+    <p id="alert" hidden>  
+    <strong>You lost ! </strong></p>
+    <p id="alert_success" hidden>
+    <strong>Well Done ! </strong> Get ready for the next one 😉
+    </p>
+    <p id="alert_warning" hidden>
+    </p>
     </div>
 </body>
 </html>

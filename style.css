@@ -37,7 +37,7 @@ body {
 }
 #main{
     border: solid;
-    margin-top: 60px;
+    margin-top: 40px;
     width: 70%;
     border-radius: 8px;
     margin-left: auto;
@@ -46,7 +46,7 @@ body {
 }
 #game{
     border: solid;
-    margin-top: 80px;
+    margin-top: 30px;
     width: 70%;
     border-radius: 8px;
     margin-left: auto;
@@ -91,6 +91,8 @@ body {
     letter-spacing: .25em;
     font-weight: bold;
     border-radius: 8px;
+    margin-left: 420px;
+    position: fixed;
 }
 #withdraw{
     margin: 10px;
@@ -102,5 +104,23 @@ body {
     letter-spacing: .25em;
     font-weight: bold;
     border-radius: 8px;
-    margin-left: 240px;
+    margin-left: 260px;
+    position: fixed;
+}
+#hinter{
+    margin: 10px;
+    border-color:cornflowerblue;
+    padding: 1em 1.5em;
+    border: 2;
+    color:cornflowerblue;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-left: 135px;
+    position: fixed;
+}
+img{
+    width: 4px;
+    height: 40px;
 }
