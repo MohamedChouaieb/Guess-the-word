@@ -4,7 +4,7 @@ var category={
     countries:["Spain","Argentina","Canada","Italy","Japan","Russia"],
     programming_Lang:["JavaScript","Python","Java","Ruby","HTML"],
     fruits:["Apple","Lemon","Watermelon","Pineapple","Kiwi"],
-    movies:['Harry Potter','Star Wars','Lord of the Rings','Johnny Englsih','The Batman','Pirates of the Caribbean']
+    movies:['Harry Potter','Star Wars','Lord of the Rings','Johnny Englsih','Batman','Pirates of the Caribbean']
 }
 var main=document.getElementById("main")
 var game=document.getElementById("game")
@@ -121,7 +121,6 @@ function win(){
     alert_warning.style.display = "none"
     toggle("alert_success")
     toggle("alert_success")
-    reload()
 }
 //In case of losing the game or withdrawing
 function lost(){
@@ -129,13 +128,12 @@ function lost(){
     alert_warning.style.display = "none"
     toggle("alert")
     toggle("alert")
-    reload()
 }
 //Reloading the page
 function reload() {
     setTimeout(function() {
         window.location.reload();
-    }, 6000); 
+    }, 100); 
 }
 //disabling the buttons
 function disableAll(){
@@ -148,6 +146,8 @@ function disableAll(){
     document.getElementById("hinter").disabled=true
     checker.disabled=true
     withdraw.disabled=true
+    document.getElementById("again").disabled=false
+
 }
 //hint++
 function hintPlus(){

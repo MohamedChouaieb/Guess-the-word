@@ -117,6 +117,18 @@ body {
     border-radius: 8px;
     margin-left: 0px;
 }
+#again{
+  margin: 10px;
+  border-color:#b356f0;
+  padding: 1em 1.5em;
+  border: 2;
+  color:#b356f0;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-left: 180px;
+}
 #hinter{
     margin: 10px;
     border-color:cornflowerblue;
@@ -127,7 +139,7 @@ body {
     letter-spacing: .25em;
     font-weight: bold;
     border-radius: 8px;
-    margin-left: 330px;
+    margin-left: 0px;
 }
 nav {
     display: flex;
