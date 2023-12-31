@@ -1,12 +1,10 @@
 //object of categories
 var category={
-    countries:["England","China","Spain","Argentina","Brazil","Canada","Germany","Japan","Mexico","Russia"],
-    programming_Lang:["JavaScript","Python","Java","C++","C#","Ruby","Swift","PHP","Rust","HTML","CSS","SQL"],
-    fruits:["Apple","Banana","Orange","Strawberry","Grapes","Watermelon","Pineapple","Mango","Kiwi","Peach","Pear","Cherry","Blueberry","Raspberry","Avocado"],
-}
-//object of hints 
-var helper={
-    countries:["england.png","china.png","spain.png","argentina.png","brazil.png","canada.png"]
+    games:['Hollow Knight','Dark souls','Sekiro','Fortnite','Genshin Impact','Valorant','Elden Ring'],
+    countries:["Spain","Argentina","Canada","Italy","Japan","Russia"],
+    programming_Lang:["JavaScript","Python","Java","Ruby","HTML"],
+    fruits:["Apple","Lemon","Watermelon","Pineapple","Kiwi"],
+    movies:['Harry Potter','Star Wars','Lord of the Rings','Johnny Englsih','The Batman','Pirates of the Caribbean']
 }
 var main=document.getElementById("main")
 var game=document.getElementById("game")
@@ -14,7 +12,7 @@ var game=document.getElementById("game")
 function display(){
     main.innerHTML+=`<h1 id="sel">Select a category to start ! </h1>`;
     let button=document.createElement("div");
-    for (let i  in category) {
+    for (let i  in category) {  
         button.innerHTML+=`<button class="category" onclick="generateWord('${i}')" id="${i}">${i}</button>`
     }
     button.classList.add("button-container");
@@ -29,10 +27,10 @@ function getRandomInt(max) {
 let random;
 //Random word selection
 function generateWord(object){
+    document.getElementById("withdraw").disabled=false
     let len=(Object.values(category[object])).length
     let array=Object.values(category[object])
     random=(array[getRandomInt(len)])
-    console.log(random)
     let buttons = document.getElementsByTagName('category');
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].disabled = true;
@@ -49,19 +47,21 @@ function generateWord(object){
     }
     let sel=document.getElementById("sel")
     sel.innerHTML=`The game started , the selected category is `+object;
-    hintPlus(object)
 }
 //Hints about the random word
 var hint=document.createElement("p")
 function hints(random){
-    hint.innerHTML="<h3>● The word start with the letter : "+random[0]+"</h3><h3>● The word contain "+random.length+" carcteres</h3>"
-    game.append(hint)
+    hint.innerHTML="<h3>● The word start with the letter : "+random[0]+"</h3>"
+    game.appendChild(hint)
 }
 //Counter of trials
-var tryCount=0
+var tryCount=-1
 function start(){
     if (document.getElementById("choice").value==="") {
         alert("Invalid input !")
+    }
+    if (tryCount===1) {
+        hint.innerHTML+="<h3>● The word contain "+random.length+" carcteres</h3>"
     }
     if ((tryCount<6) && (check())) {
         win()
@@ -98,7 +98,7 @@ var alert_warning=document.getElementById("alert_warning")
 //In case of wrong answer
 var ttry=document.createElement("p")
 function tryAgin(i){
-    if (i===3) {
+    if (i===4) {
         x=document.getElementById("hinter")
         x.disabled=false
         ttry.innerHTML="<strong>Try again !</strong> Hint is available ; "+(5-i)+" trial remaining !"
@@ -108,7 +108,7 @@ function tryAgin(i){
         ttry.innerHTML="<strong>Try again !</strong> You still got "+(5-i)+" trial remaining !"
     } 
     else {
-        ttry.innerHTML="<strong>Try again !</strong> Your last chance !"
+        ttry.innerHTML="<strong>Your last chance !</strong>"
     }
     alert_warning.append(ttry)
     if(!(toggle("alert_warning"))){
@@ -137,6 +137,7 @@ function reload() {
         window.location.reload();
     }, 6000); 
 }
+//disabling the buttons
 function disableAll(){
     var withdraw=document.getElementById("withdraw")
     var checker=document.getElementById("checker")
@@ -144,13 +145,14 @@ function disableAll(){
         button=document.getElementById(j)
         button.disabled=true
     }
+    document.getElementById("hinter").disabled=true
     checker.disabled=true
     withdraw.disabled=true
 }
 //hint++
-function hintPlus(id){
-    var image=document.createElement("p")
-    image.innerHTML=`<img src="`+id/random.toLowerCase()+`.png">`
-    game.append(image)
+function hintPlus(){
+    var randomL=random.toLowerCase()
+    hint.innerHTML+='<h3>● Here is your extra hint : </h3><img id="hintChild" src="./Images/'+randomL+'.png" alt="you can imagine this is a special hint">'
+    game.append(hint)
     document.getElementById("hinter").disabled=true
 }
