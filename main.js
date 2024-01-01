@@ -4,7 +4,7 @@ var category={
     countries:["Spain","Argentina","Canada","Italy","Japan","Russia"],
     programming_Lang:["JavaScript","Python","Java","Ruby","HTML"],
     fruits:["Apple","Lemon","Watermelon","Pineapple","Kiwi"],
-    movies:['Harry Potter','Star Wars','Lord of the Rings','Johnny Englsih','Batman','Pirates of the Caribbean']
+    movies:['Harry Potter','Star Wars','Lord of the Rings','Johnny English','Batman','Pirates of the Caribbean']
 }
 var main=document.getElementById("main")
 var game=document.getElementById("game")
